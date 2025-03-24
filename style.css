@@ -141,7 +141,7 @@ a {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding-top: 120px;
+      padding-top: 90px;
 }
 
 .about-info {
@@ -177,6 +177,7 @@ a {
       font-family: var(--second-text);
       font-size: clamp(14px, 2vw, 18px);
       color: #ffffff8a;
+      padding-top: 12px;
 }
 
 .about-missions {
