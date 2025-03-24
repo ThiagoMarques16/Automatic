@@ -36,26 +36,26 @@ li {
       list-style: none;
 }
 
-a:hover{
+a:hover {
       cursor: pointer;
       color: #03b403;
-      transition: color 500ms linear ;
+      transition: color 500ms linear;
 
 }
 
-li:hover{
+li:hover {
       border-bottom: solid 1px #03b403;
 
 }
 
-a{
+a {
       text-decoration: none;
       font-family: var(--second-text);
       color: #ffffff;
       padding-block: 16px;
 }
 
-.hamburger{
+.hamburger {
       border: none;
       background: none;
       border-top: 3px solid #fff;
@@ -65,7 +65,7 @@ a{
 }
 
 .hamburger::before,
-.hamburger::after{
+.hamburger::after {
       content: " ";
       display: block;
       width: 30px;
@@ -81,14 +81,12 @@ a{
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      width: 100vw;
+      width: 100%;
       height: 100vh;
       background-image: url("https://cdn.leonardo.ai/users/31394e13-26d4-46f0-a748-442eba317aa3/generations/9470e3ce-a78d-48fd-97c0-bb7d6cd10c69/segments/1:4:1/Flux_Dev_A_sleek_futuristic_computer_system_with_a_glowing_neo_0.jpeg");
       background-size: cover;
       background-repeat: no-repeat;
 }
-
-
 
 .title-home {
       font-family: "Stick No Bills", sans-serif;
@@ -104,6 +102,8 @@ a{
       width: 0;
       text-transform: uppercase;
       width: 800px;
+      text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+
 }
 
 .info-container {
@@ -133,28 +133,128 @@ a{
       transform: scale(1.05);
 }
 
+.container-about {
+      width: 100%;
+      height: 100vh;
+      background-image: url("/img/background-about.png");
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+.infoAbout-container {
+      display: flex;
+      align-items: center;
+      padding: 0px 40px;
+      width: 80%;
+      height: 80vh;
+      background: rgb(5, 10, 26);
+      background: radial-gradient(circle, rgba(5, 10, 26, 1) 0%, rgba(17, 22, 42, 1) 100%);
+      margin-top: 25px;
+      border-radius: 20px;
+      backdrop-filter: blur(8px);
+      -webkit-box-shadow: 4px 11px 32px -7px rgba(72, 168, 219, 0.2);
+      -moz-box-shadow: 4px 11px 32px -7px rgba(72, 168, 219, 0.2);
+      box-shadow: 4px 11px 32px -7px rgba(72, 168, 219, 0.2);
+}
+
+.infoAbout-container div {
+      width: 50%;
+}
+
+.title-apresentation {
+      font-family: var(--primary-text);
+      color: #fff;
+      font-size: 29px;
+
+}
+
+.text-apresentation {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+}
+
+.text-about {
+      width: 70%;
+      font-style: italic;
+      font-family: var(--second-text);
+      font-size: 16px;
+      color: #727171;
+      text-align: left;
+
+}
+
+.text-missions {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+}
+
+.missions-about{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0px 15px;
+      background-color: #00000060;
+      color: #fff;
+      padding: 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-family: var(--second-text);
+}
+
+.icon{
+      width: 40px;
+      display: flex;
+      justify-content: end;
+}
+
+.icon img{
+      width: 30px;
+      padding: 0px;
+}
+
 
 @media (max-width: 884px) {
-      .title-home{
+      .title-home {
             font-size: 80px;
       }
 
-      .text-home{
+      .text-home {
             width: 550px;
             font-size: 17px;
       }
+
+      .title-apresentation {
+            font-size: 22px;
+      
+      }
+
+      .text-missions{
+            gap: 6px;
+      }
+
+      .text-about{
+            font-size: 14px;
+      }
+
+      .missions-about{
+            font-size: 10px;
+      }
 }
 
-@media (max-width: 678px) {
-      .hamburger{
+@media (max-width: 784px) {
+      .hamburger {
             display: block;
             z-index: 1;
       }
 
-      nav{
+      nav {
             justify-content: space-between;
       }
-      .nav-list{
+
+      .nav-list {
             position: fixed;
             top: 0;
             left: 0;
@@ -168,7 +268,7 @@ a{
             pointer-events: none;
       }
 
-      .nav.active .nav-list{
+      .nav.active .nav-list {
             clip-path: circle(1500px at 90% 15%);
             pointer-events: all;
       }
@@ -178,79 +278,112 @@ a{
             opacity: 0;
       }
 
-      .nav-list li:nth-child(1) a{
+      .nav-list li:nth-child(1) a {
             transition: 0.5s 0.2s;
       }
 
-      .nav-list li:nth-child(2) a{
+      .nav-list li:nth-child(2) a {
             transition: 0.5s 0.4s;
 
       }
 
-      .nav-list li:nth-child(3) a{
+      .nav-list li:nth-child(3) a {
             transition: 0.5s 0.6s;
 
       }
 
-      .nav-list li:nth-child(4) a{
+      .nav-list li:nth-child(4) a {
             transition: 0.5s 0.8s;
 
       }
 
-      .nav-list li:nth-child(5) a{
+      .nav-list li:nth-child(5) a {
             transition: 0.5s 1s;
 
       }
 
-      .nav.active .nav-list a{
+      .nav.active .nav-list a {
             opacity: 1;
       }
 
-      .nav.active .hamburger{
+      .nav.active .hamburger {
             position: absolute;
             top: 40px;
             border-top-color: transparent;
             right: 40px;
       }
 
-      .nav.active .hamburger::before{
+      .nav.active .hamburger::before {
             transform: rotate(135deg);
       }
 
-      .nav.active .hamburger::after{
+      .nav.active .hamburger::after {
             transform: rotate(-135deg);
             top: -8px;
+      }
+
+      .infoAbout-container{
+            flex-direction: column;
+      }
+
+      .infoAbout-container div{
+            width: 100%;
+            height: 50%;
+      }
+
+      .text-apresentation{
+            align-items: center;
+      }
+
+      .text-about{
+            font-size: 12px;
+      }
+
+      .title-apresentation{
+            text-align: center;
+            width: 70%;
+            font-size: 16px;
+            padding-top: 15px;
+      }
+
+      .missions-about{
+            padding: 12px;
       }
 }
 
 @media (max-width: 582px) {
-      .title-home{
+      .title-home {
             font-size: 65px;
       }
 
-      .text-home{
+      .text-home {
             width: 400px;
             font-size: 14px;
       }
 
-      .btnDemo{
+      .btnDemo {
             padding: 9px 24px;
             font-size: 10px;
       }
 }
 
 @media (max-width: 462px) {
-      .title-home{
+      .title-home {
             font-size: 50px;
       }
 
-      .text-home{
+      .text-home {
             width: 300px;
             font-size: 11px;
       }
 
-      .btnDemo{
+      .btnDemo {
             padding: 9px 20px;
             font-size: 8px;
+      }
+
+      nav img {
+            width: 60px;
+            height: 60px;
       }
 }

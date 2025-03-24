@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="style.css">
       <title>Automatic</title>
 </head>
+
 <body>
       <nav class="nav">
             <img src="/img/logo.png" alt="logo-automatic" class="logo">
             <button class="hamburger"></button>
             <ul class="nav-list">
-                  <li class="nav-item"><a href="#">HOME</a></li>
+                  <li class="nav-item"><a href="#container-about">HOME</a></li>
                   <li class="nav-item"><a href="#">SOBRE NÓS</a></li>
                   <li class="nav-item"><a href="#">SERVIÇOS</a></li>
                   <li class="nav-item"><a href="#">BLOG</a></li>
@@ -19,17 +21,36 @@
             </ul>
       </nav>
 
-      
-      <div class="container-home">
-                  <h1 class="title-home">A U T O M A T I C</h1>
 
-                  <div class="info-container">
-                        <p class="text-home">Simplifique processos, reduza custos e aumente a eficiência da sua empresa com nossas soluções inovadoras.<p>
-                        <button class="btnDemo">Solicitar Demosntração</button>
+      <div class="container-home">
+            <h1 class="title-home">A U T O M A T I C</h1>
+
+            <div class="info-container" id="container-about">
+                  <p class="text-home">Simplifique processos, reduza custos e aumente a eficiência da sua empresa com
+                        nossas soluções inovadoras.
+                  <p>
+
+                  <button class="btnDemo">Solicitar Demosntração</button>
+            </div>
+
+      </div>
+
+      <div class="container-about">
+            <div class="infoAbout-container">
+                  <div class="text-apresentation">
+                        <h1 class="title-apresentation">Inovação e Eficiência para Pequenas Empresas</h1>
+                        <p class="text-about">Na TechNova, acreditamos que a tecnologia deve trabalhar a favor do seu crescimento. Com uma equipe experiente e apaixonada por inovação, desenvolvemos soluções que simplificam tarefas e impulsionam resultados.</p>
                   </div>
 
+                  <div class="text-missions">
+                              <p class="missions-about">Democratizar a automação empresarial com soluções acessíveis e eficazes. <span class="icon"><img src="/img/automacao.png" alt=""></span></p>
+                              <p class="missions-about">Ser referência global em automação para pequenas empresas. <span class="icon"><img src="/img/global.png" alt=""></span></p>
+                              <p class="missions-about">Inovação, simplicidade, transparência e foco no cliente. <span class="icon"><img src="/img/ideia.png" alt=""></span></p>
+                  </div>
+            </div>
       </div>
 
       <script src="script.js"></script>
 </body>
+
 </html>
