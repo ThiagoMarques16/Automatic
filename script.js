@@ -5,20 +5,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const hamburger = document.querySelector(".hamburger")
       const nav = document.querySelector(".nav")
+      const itens = document.querySelectorAll(".item")
 
       hamburger.addEventListener("click", () =>{
             nav.classList.toggle("active")
       })
 
-
+      itens.forEach(item =>{
+            item.addEventListener("click", () =>{
+                  nav.classList.remove("active")
+            })
+      })
       function typeEffect() {
             if (index < text.length) {
                   textElement.textContent += text.charAt(index);
                   index++;
-                  setTimeout(typeEffect, 50); // Velocidade da digitação
+                  setTimeout(typeEffect, 50); 
             }
       }
 
-      textElement.textContent = ""; // Limpa o texto inicial
-      typeEffect(); // Inicia o efeito
+      textElement.textContent = ""; 
+      typeEffect(); 
 });
