@@ -233,19 +233,20 @@ a {
       display: flex;
       justify-content: center;
       align-items: center;
+      overflow: hidden;
 
 }
 
 .services-cards {
       display: grid;
-      justify-items: center; 
-      align-items: center;   
+      justify-items: center;
+      align-items: center;
       gap: 20px;
       grid-template-columns: repeat(2, 1fr) 1.5fr;
       grid-template-rows: repeat(2, 1fr);
       grid-template-areas:
-          "a b e"
-          "c d e";
+            "a b e"
+            "c d e";
       width: 80%;
       max-width: 1000px;
       height: 400px;
@@ -537,16 +538,27 @@ a {
       .mission-icon {
             width: 30px;
       }
+
       .services-cards {
             grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, 1fr);
+            grid-template-rows: auto auto auto auto;
             grid-template-areas:
-                "a b"
-                "c d";
-        }
-        .card:nth-child(5) {
-            display: none; /* Remover o banner */
-        }
+                "a a"
+                "b b"
+                "c c"
+                "d d";
+            height: 100%;
+            width: 80%; 
+            overflow-y: auto; 
+      }
+      .card{
+            flex-direction: column;
+            height: 120px;
+      }
+      .card:nth-child(5) {
+            display: none;
+      }
+
 
 }
 
