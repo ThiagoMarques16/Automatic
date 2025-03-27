@@ -62,6 +62,11 @@ a {
       padding-block: 16px;
 }
 
+.linkActive{
+      color: #00e5ff;
+      font-weight: 800;
+}
+
 .hamburger {
       border: none;
       background: none;
@@ -449,6 +454,8 @@ a {
             height: 100%;
             width: 80%; 
             margin-left: 25px;
+            gap: 12px;
+
       }
       .card{
             flex-direction: column;

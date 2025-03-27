@@ -7,6 +7,25 @@ document.addEventListener("DOMContentLoaded", function () {
       const nav = document.querySelector(".nav")
       const itens = document.querySelectorAll(".item")
 
+      const sections = document.querySelectorAll("section")
+      const navLinks = document.querySelectorAll("nav a")
+
+      const observer = new IntersectionObserver((entries => {
+            entries.forEach((entry) => {
+                  if(entry.isIntersecting){
+                        navLinks.forEach((link) => {
+                              link.classList.remove("linkActive");
+                              if(link.getAttribute("href").substring(1) === entry.target.id){
+                                    link.classList.add("linkActive")
+                              }
+                        })
+                  }
+            })
+      }), {threshold: 0.5})
+
+      sections.forEach((section) => observer.observe(section));
+
+
       hamburger.addEventListener("click", () =>{
             nav.classList.toggle("active")
       })
